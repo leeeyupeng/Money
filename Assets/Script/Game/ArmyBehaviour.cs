@@ -9,7 +9,8 @@ public class ArmyBehaviour : MonoBehaviour {
     public void Init(JSON json)
     {
     }
-    public Dictionary<int,SoldierBehaviour> m_heros;
+
+    public Dictionary<int,SoldierBehaviour> m_heros = new Dictionary<int, SoldierBehaviour>();
     public SoldierBehaviour GetSolider(int id)
     {
         return m_heros[id];
@@ -26,7 +27,7 @@ public class ArmyBehaviour : MonoBehaviour {
     {
         return m_heros;
     }
-	// Use this for initialization
+    // Use this for initialization＋
 	void Start () {
 	
 	}

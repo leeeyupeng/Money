@@ -66,7 +66,7 @@
      <Compile Include="Assets\Script\Game\ArmyBehaviour.cs" />
      <Compile Include="Assets\Script\Game\GameLogic.cs" />
      <Compile Include="Assets\Script\Game\Global.cs" />
-     <Compile Include="Assets\Script\Game\GobalAction.cs" />
+     <Compile Include="Assets\Script\Game\GlobalAction.cs" />
      <Compile Include="Assets\Script\Game\MapBehaviour.cs" />
      <Compile Include="Assets\Script\Game\SelectLevel.cs" />
      <Compile Include="Assets\Script\Game\SoldierBehaviour.cs" />
@@ -82,7 +82,7 @@
      <None Include="Assets\Resources\ConfigData\Formation.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
-     <None Include="Assets\Resources\ConfigData\Map\map01.txt" />
+     <None Include="Assets\Resources\ConfigData\Map\map1.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

@@ -7,9 +7,11 @@ public enum ActionType : int
 {
 	Timer = 0,
     StartTrun,
+    GlobalCount,
         
         
     Move = 100,
+    SoliderCount,
     Count
 }
 public class ActionJson

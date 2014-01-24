@@ -21,12 +21,17 @@ public class GameLogic : MonoBehaviour {
     {
 		m_instance = this;
 		
+        JSON json = new JSON();
+        json.serialized = FileUtil.ReadText("map/map1.json");
+        SelectLevel.level = json;
+
         Load(SelectLevel.level);
     }
     //加载关卡 加载地图 挂脚本 加载士兵模型
     void Load(JSON json)
     {
-
+        Debug.Log(json.serialized);
+        m_actionManager = new ActionManager();
     }
 	// Use this for initialization
 	void Start () 
@@ -106,16 +111,14 @@ public class GameLogic : MonoBehaviour {
     void HandleAction(JSON json)
     {
 		ActionType type = ActionJson.ActionTypeFromID(json.ToInt("type"));
-		switch(type)
-		{
-		case ActionType.Timer:
-			break;
-		case ActionType.StartTrun:
-			break;
-			
-			
-		case ActionType.Move:
-			break;
-		}
+        if ((int)type <= (int)ActionType.GlobalCount)
+            m_globalAction.AddAction(json);
+        else if ((int)type <= (int)ActionType.SoliderCount)
+        {
+            int team = json.ToInt("team");
+            int soldier = json.ToInt("solider");
+            SoldierBehaviour sb = m_armys[team].GetSolider(soldier);
+            sb.AddAction(json);
+        }
     }
 }

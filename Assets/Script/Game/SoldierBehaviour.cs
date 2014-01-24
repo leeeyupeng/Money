@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+using MiniJSON2;
+
 public class SoldierBehaviour : MonoBehaviour {
     //id 代表士兵所在得格子
     public int m_idGrid = 0;
@@ -9,7 +11,6 @@ public class SoldierBehaviour : MonoBehaviour {
 
     public float m_speed;	
 
-    public ActionQueue m_actions;
 	public bool TimeBar(float deltaTime)
 	{
 		m_timeBar += deltaTime;
@@ -17,6 +18,18 @@ public class SoldierBehaviour : MonoBehaviour {
 			return true;
 		return false;
 	}
+
+    public void AddAction(JSON json)
+    {
+        ActionType type = ActionJson.ActionTypeFromID(json.ToInt("type"));
+        ActionBase action = null;
+        switch (type)
+        {
+            case ActionType.Move:
+                break;
+        }
+        action.Init(json);
+    }
 
 	// Use this for initialization
 	void Start () {

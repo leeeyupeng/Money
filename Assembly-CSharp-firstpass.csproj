@@ -112,7 +112,7 @@
      <None Include="Assets\Resources\ConfigData\Formation.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
-     <None Include="Assets\Resources\ConfigData\Map\map01.txt" />
+     <None Include="Assets\Resources\ConfigData\Map\map1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

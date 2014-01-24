@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{E0F647B5-6342-27E8-B236-D7D249767A00}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity4.1.2/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity4.1.2/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Script\Action\ActionBase.cs" />
+     <Compile Include="Assets\Script\Action\ActionMove.cs" />
+     <Compile Include="Assets\Script\Action\ActionQueue.cs" />
+     <Compile Include="Assets\Script\Action\ActionSkill.cs" />
+     <Compile Include="Assets\Script\Action\ActionTimeForward.cs" />
+     <Compile Include="Assets\Script\Action\ActionTimer.cs" />
+     <Compile Include="Assets\Script\Action\ActionWait.cs" />
+     <Compile Include="Assets\Script\AnimateTextureUV.cs" />
+     <Compile Include="Assets\Script\Camera_Set.cs" />
+     <Compile Include="Assets\Script\DataBase\Struct.cs" />
+     <Compile Include="Assets\Script\Effect\BasicEffectBehaviour.cs" />
+     <Compile Include="Assets\Script\Effect\BasicParticleBehaviour.cs" />
+     <Compile Include="Assets\Script\Effect\DayNightController.cs" />
+     <Compile Include="Assets\Script\Effect\DetailEffectBehaviour.cs" />
+     <Compile Include="Assets\Script\Effect\DetailEffectControl.cs" />
+     <Compile Include="Assets\Script\Effect\DetailEffectTest.cs" />
+     <Compile Include="Assets\Script\Effect\DetailParticleBehaviour.cs" />
+     <Compile Include="Assets\Script\Effect\EffectCameraOverride2.cs" />
+     <Compile Include="Assets\Script\Effect\EffectSideControl.cs" />
+     <Compile Include="Assets\Script\Game\ActionJson.cs" />
+     <Compile Include="Assets\Script\Game\ActionManager.cs" />
+     <Compile Include="Assets\Script\Game\ArmyBehaviour.cs" />
+     <Compile Include="Assets\Script\Game\GameLogic.cs" />
+     <Compile Include="Assets\Script\Game\Global.cs" />
+     <Compile Include="Assets\Script\Game\GlobalAction.cs" />
+     <Compile Include="Assets\Script\Game\MapBehaviour.cs" />
+     <Compile Include="Assets\Script\Game\SelectLevel.cs" />
+     <Compile Include="Assets\Script\Game\SoldierBehaviour.cs" />
+     <Compile Include="Assets\Script\Game\Static.cs" />
+     <Compile Include="Assets\Script\RandomStartAnimation.cs" />
+     <Compile Include="Assets\Script\RenderSetting_Set.cs" />
+     <Compile Include="Assets\Script\Table\TableBase.cs" />
+     <Compile Include="Assets\Script\Table\TableFormation.cs" />
+     <Compile Include="Assets\Script\Table\TableSolider.cs" />
+     <Compile Include="Assets\Temp\Script\Temp.cs" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Cutout.shader" />
+     <None Include="Assets\Resources\ConfigData\Formation.txt" />
+     <None Include="Assets\Resources\ConfigData\solider.txt" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
+     <None Include="Assets\Shaders\ParticleAdd2Tex.shader" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Simple Texture .shader" />
+     <None Include="Assets\Resources\ConfigData\Map\map1.txt" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{47A8DC1A-9D3E-073D-E357-78F94EDAC637}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

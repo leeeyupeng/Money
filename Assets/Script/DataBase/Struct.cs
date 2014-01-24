@@ -29,7 +29,7 @@ namespace DataBase
         {
             Solider s = new Solider();
             s.id = json.ToInt("id");
-            s.name = json.ToString2("name");
+            s.name = json.ToString("name");
             s.health = json.ToInt("health");
             s.attack = json.ToInt("attack");
             s.defense = json.ToInt("defense");
@@ -39,9 +39,47 @@ namespace DataBase
 
     public class character
     {
-        public List<Solider> m_soliders;
-        public int m_formationID;
-        public List<int> m_formation;
+        public List<Solider> m_soliders = new List<Solider>();
+        public int m_formationID = 0;
+        public Dictionary<int,int> m_formation = new Dictionary<int,int>();
+        public static character JsonTo(JSON json)
+        {
+            character c = new character();
+            JSON armyJson = json.ToJSON("army");
+            foreach (string key in armyJson.fields.Keys)
+            {
+                c.m_soliders.Add(DataBase.Solider.JsonTo(armyJson.ToJSON(key)));
+            }
+            c.m_formationID = json.ToInt("formationID");
+
+            JSON fJson = json.ToJSON("formation");
+            foreach (string key in fJson.fields.Keys)
+            {
+                c.m_formation.Add(Convert.ToInt32(key),fJson.ToInt(key));
+            }
+            return c;
+        }
+        public static JSON ToJson(character c)
+        {
+            JSON cJson = new JSON();
+            JSON armyJson = new JSON();
+            for(int i = 0; i < c.m_soliders.Count;i++)
+            {
+                JSON solider = Solider.ToJson(c.m_soliders[i]);
+
+                armyJson[i.ToString()] = solider;
+            }
+            cJson["army"] = armyJson;
+            cJson["formationID"] = c.m_formationID;
+
+            JSON formationJson = new JSON();
+            foreach(KeyValuePair<int,int> p in c.m_formation)
+            {
+                formationJson[p.Key.ToString()] = p.Value;
+            }
+            cJson["formation"] = formationJson;
+            return cJson;
+        }
     }
 
     public class Formation

@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Game/Global.cs">
+    <Files>
+      <File FileName="Assets/Script/Game/GameLogic.cs" Line="42" Column="22" />
+      <File FileName="Assets/Plugins/Other/FileUtil.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Game/GlobalAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Action/ActionQueue.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Action/ActionBase.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Game/SoldierBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Action/ActionMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Game/ActionJson.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Camera_Set.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/MiniJson/JSON.cs" Line="97" Column="10" />
+      <File FileName="Assets/Resources/ConfigData/Map/map1.txt" Line="1" Column="1" />
+      <File FileName="Assets/Script/Table/TableFormation.cs" Line="9" Column="34" />
+      <File FileName="Assets/Script/Game/Global.cs" Line="8" Column="1" />
+      <File FileName="Assets/Script/Game/ArmyBehaviour.cs" Line="20" Column="36" />
+      <File FileName="Assets/Script/DataBase/Struct.cs" Line="44" Column="38" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

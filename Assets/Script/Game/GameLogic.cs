@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 using MiniJSON2;
@@ -20,6 +21,8 @@ public class GameLogic : MonoBehaviour {
     void Awake()
     {
 		m_instance = this;
+
+        Global.Init();
 		
         JSON json = new JSON();
         json.serialized = FileUtil.ReadText("map/map1.json");
@@ -32,6 +35,15 @@ public class GameLogic : MonoBehaviour {
     {
         Debug.Log(json.serialized);
         m_actionManager = new ActionManager();
+
+		string mapName = json.ToString("mapName");
+        Debug.Log("Prefabs/Map/" + mapName);
+        GameObject.Instantiate(Resources.Load("Prefabs/Map/" + mapName) as GameObject);
+
+        JSON army = json.ToJSON("army");
+        m_armys[1].JsonTo(army);
+
+        m_armys[0].CharacterTo(Global.m_character);
     }
 	// Use this for initialization
 	void Start () 

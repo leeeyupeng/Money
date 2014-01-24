@@ -1,13 +1,12 @@
 ﻿{
     "mapID":1,
-    "army":[
-        {
-            "0":1,
-            "2":2
+    "mapName":"battle_taimei",
+    "army":{
+        "0":{
+            "soliderID":201
         },
-        {
-            "0":1,
-            "2":2
+        "2":{
+            "soliderID":201
         }
-    ]
+    }
 }

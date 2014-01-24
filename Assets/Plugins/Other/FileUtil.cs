@@ -19,6 +19,15 @@ public class FileUtil
         }
         return ReadTextResources(fileName);
     }
+    public static string ReadTextFromPersistent(string fileName)
+    {
+        string filePath = System.IO.Path.Combine(Application.persistentDataPath, fileName);
+        if ( File.Exists(filePath) )
+        {
+            return ReadFromFile( filePath );
+        }
+        return null;
+    }
     static string ReadTextResources(string fileName)
     {
         string filePath = "ConfigData/" + fileName;

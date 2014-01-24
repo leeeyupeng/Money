@@ -1,4 +1,5 @@
 id;name;health;attack;defense;strike1;strike2;speed
-101;money;100;20;10;10;10;20
-102;money;100;20;10;10;10;20
+101;zhaoyun02;100;20;10;10;10;20
+102;dengchanyu01;100;20;10;10;10;20
 103;money;100;20;10;10;10;20
+201;zombie01;100;10;10;10;10;20

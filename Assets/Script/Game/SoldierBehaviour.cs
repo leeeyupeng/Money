@@ -11,6 +11,9 @@ public class SoldierBehaviour : MonoBehaviour {
 
     public float m_speed;	
 
+    public void Init(DataBase.Solider data)
+    {
+    }
 	public bool TimeBar(float deltaTime)
 	{
 		m_timeBar += deltaTime;
